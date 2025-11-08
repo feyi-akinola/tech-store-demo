@@ -1,5 +1,5 @@
-import BottomBanner from "./components/BottomBanner.tsx";
-import TopBanner from "./components/TopBanner.tsx";
+import BottomBanner from "../components/BottomBanner.tsx";
+import TopBanner from "../components/TopBanner.tsx";
 
 const NavBar = () => {
   return (
