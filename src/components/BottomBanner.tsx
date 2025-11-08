@@ -1,9 +1,10 @@
 import Categories from "./Categories";
 import Selector from "../components/Selectors";
+import { useState } from "react";
 
 const BottomBanner = () => {
-  const selectedCountry = "USA";
-  const selectedCurrency = "USD";
+  const [selectedCountry, setSelectedCountry] = useState<string>("USA");
+  const [selectedCurrency, setSelectedCurrency] = useState<string>("USD");
 
   const links: string[] = [
     "Promotions",
@@ -17,18 +18,6 @@ const BottomBanner = () => {
   const selectors: Record<string, any> = {
     "country": {
       "title": "Country",
-      "selectedOption": selectedCurrency,
-      "options": [
-        "USD",
-        "EUR",
-        "GBP",
-        "CAD",
-        "AUD",
-        "JPY",
-      ],
-    },
-    "currency": {
-      "title": "Currency",
       "selectedOption": selectedCountry,
       "options": [
         "USA",
@@ -42,6 +31,18 @@ const BottomBanner = () => {
         "Spain",
         "Portugal",
         "Greece",
+      ],
+    },
+    "currency": {
+      "title": "Currency",
+      "selectedOption": selectedCurrency,
+      "options": [
+        "USD",
+        "EUR",
+        "GBP",
+        "CAD",
+        "AUD",
+        "JPY",
       ],
     },
   };
@@ -91,8 +92,16 @@ const BottomBanner = () => {
 
         <div className="flex gap-12">
           <div id="selectors" className="flex items-center gap-8">
-            <Selector text={selectedCountry} options={selectors.country.options}/>
-            <Selector text={selectedCurrency} options={selectors.currency.options}/>
+            <Selector 
+              text={selectedCountry}
+              options={selectors.country.options}
+              onSelect={(option: string) => setSelectedCountry(option)}
+            />
+            <Selector 
+              text={selectedCurrency} 
+              options={selectors.currency.options}
+              onSelect={(option: string) => setSelectedCurrency(option)}
+            />
           </div>
 
           <div id="icon-buttons" className="flex items-center gap-4">

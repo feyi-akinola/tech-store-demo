@@ -13,7 +13,7 @@ const TopBanner = () => {
     {
       title: "24/7 Support",
       description: "+1 212-334-0212",
-      icon: "💰",
+      icon: "☎️",
     },
     {
       title: "Worldwide",
