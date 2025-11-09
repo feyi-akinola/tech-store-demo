@@ -13,17 +13,21 @@ const Selectors = ({ text, options, onSelect }: SelectorsProps) => {
 
   return (
     <div
-      className="relative cursor-pointer"
+      className="relative cursor-pointer group"
       onMouseEnter={toggleOverlay}
       onMouseLeave={toggleOverlay}
     >
-      <p>{text}</p>
+      <p className="text-lg group-hover:text-blue-500 transition-all
+        duration-300"
+      >
+        {text}
+      </p>
 
       {
         isOverlayShown && (
           <div
-            className={`absolute px-6 py-3 top-5 bg-white rounded-lg ring-1
-              ring-gray-100 shadow-2xl flex flex-col gap-4 z-10`}
+            className="absolute px-6 py-3 top-6 bg-white rounded-lg ring-1
+              ring-gray-100 shadow-2xl flex flex-col gap-4 z-10 text-lg"
           >
             {
               options.map((option, index) => (

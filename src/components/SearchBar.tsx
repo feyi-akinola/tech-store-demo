@@ -1,3 +1,4 @@
+import SearchIcon from "../assets/svg/search.svg?react";
 
 const SearchBar = () => {
   return (
@@ -12,8 +13,14 @@ const SearchBar = () => {
       >
       </input>
 
-      <button className="absolute right-1 w-10 h-10 rounded-full bg-blue-500 text-white">
-      </button>
+      <div
+        className="absolute right-1 w-10 h-10 rounded-full bg-blue-500
+          text-white flex items-center justify-center"
+      >
+        <SearchIcon
+          className="w-5 h-5 fill-white"
+        />
+      </div>
     </div>
   );
 };

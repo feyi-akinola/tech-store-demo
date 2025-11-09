@@ -1,6 +1,18 @@
+import { useState } from "react";
 import Categories from "./Categories";
 import Selector from "../components/Selectors";
-import { useState } from "react";
+
+// Icons
+import AccountIcon from "../assets/svg/account.svg?react";
+import WishlistIcon from "../assets/svg/heart.svg?react";
+import CartIcon from "../assets/svg/cart.svg?react";
+
+interface IconButton {
+  title: string,
+  icon: any,
+  hasBadge: boolean,
+  badgeContent: number | null,
+}
 
 const BottomBanner = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>("USA");
@@ -47,24 +59,30 @@ const BottomBanner = () => {
     },
   };
   
-  const iconButtons: Record<string, any>[] = [
+  const iconButtons: IconButton[] = [
     {
-      "title": "Account",
-      "icon": "👤",
-      "hasBadge": false,
-      "badgeContent": 0,
+      title: "Account",
+      icon: <AccountIcon
+        className="w-4.5 h-4.5 fill-black/80 group-hover:fill-blue-500
+          group-hover:scale-115 transition-all duration-300"/>,
+      hasBadge: false,
+      badgeContent: null,
     },
     {
-      "title": "Wishlist",
-      "icon": "💖",
-      "hasBadge": true,
-      "badgeContent": 1,
+      title: "Wishlist",
+      icon: <WishlistIcon
+        className="w-4.5 h-4.5 fill-black/80 group-hover:fill-red-600
+          group-hover:scale-115 transition-all duration-300"/>,
+      hasBadge: true,
+      badgeContent: 1,
     },
     {
-      "title": "Cart",
-      "icon": "🛒",
-      "hasBadge": true,
-      "badgeContent": 2,
+      title: "Cart",
+      icon: <CartIcon
+        className="w-4.5 h-4.5 fill-black/80 group-hover:fill-green-600
+          group-hover:scale-115 transition-all duration-300"/>,
+      hasBadge: true,
+      badgeContent: 2,
     },
   ];
 
@@ -98,7 +116,7 @@ const BottomBanner = () => {
               onSelect={(option: string) => setSelectedCountry(option)}
             />
             <Selector 
-              text={selectedCurrency} 
+              text={selectedCurrency}
               options={selectors.currency.options}
               onSelect={(option: string) => setSelectedCurrency(option)}
             />
@@ -106,25 +124,25 @@ const BottomBanner = () => {
 
           <div id="icon-buttons" className="flex items-center gap-4">
             {
-              iconButtons.map((iconButton: Record<string, any>, index: number) => (
+              iconButtons.map((iconButton: IconButton, index: number) => (
                 <div 
                   key={index}
-                  className="relative w-10 h-10 rounded-full bg-white flex
-                    items-center justify-center"
+                  className="relative w-12 h-12 rounded-full bg-white flex
+                    items-center justify-center group cursor-pointer"
                 >
-                  <p
-                    className="w-10 h-10 rounded-full bg-white flex items-center
-                      justify-center"
-                  >
-                    {iconButton.icon}
-                  </p>
-                  <span
-                    className="absolute w-5 h-5 rounded-full bg-white flex
-                      items-center justify-center -top-2 -right-2 text-xs ring-1
-                      ring-gray-300"
-                  >
-                    {iconButton.badgeContent}
-                  </span>
+                  {iconButton.icon}
+                  {
+                    iconButton.hasBadge && (
+                      <div
+                        className="absolute w-6 h-6 rounded-full bg-red-500 flex
+                          items-center justify-center -top-3 -right-2"
+                      >
+                        <p className="text-white text-xs font-bold">
+                          {iconButton.badgeContent}
+                        </p>
+                    </div>
+                    )
+                  }
                 </div>
               ))
             }
@@ -134,7 +152,6 @@ const BottomBanner = () => {
             </p>
           </div>
         </div>
-
     </div>
   );
 };

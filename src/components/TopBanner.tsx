@@ -1,11 +1,15 @@
 import SearchBar from "./SearchBar";
 import TopBannerSection from "./TopBannerSection";
 
+// Icons
+import TwentyFourIcon from "../assets/svg/24.svg?react";
+import WorldIcon from "../assets/svg/world.svg?react";
+
 
 interface Section {
   title: string;
   description: string;
-  icon: string;
+  icon: any;
 }
 
 const TopBanner = () => {
@@ -13,12 +17,14 @@ const TopBanner = () => {
     {
       title: "24/7 Support",
       description: "+1 212-334-0212",
-      icon: "☎️",
+      icon: <TwentyFourIcon
+        className="w-8 h-8 fill-black/80" />,
     },
     {
       title: "Worldwide",
       description: "Free Shipping",
-      icon: "🚚",
+      icon: <WorldIcon
+        className="w-8 h-8 fill-black/80" />,
     },
   ];
 
