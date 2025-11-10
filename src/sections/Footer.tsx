@@ -1,5 +1,4 @@
 interface FooterSection {
-
   title: string;
   links: string[];
 }
@@ -61,7 +60,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full mt-24 mx-auto bg-blue-100 flex flex-col items-center justify-center gap-6 p-10">
+    <footer className="w-full mx-auto bg-blue-100 flex flex-col items-center justify-center gap-6 p-10">
       <div id="footer-sections" className="w-full flex items-center justify-evenly">
         {
           footerSections.map((section, index) => (
