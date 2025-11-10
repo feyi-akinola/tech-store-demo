@@ -147,8 +147,8 @@ const BottomBanner = () => {
               ))
             }
 
-            <p id="cart-total" className="font-bold text-blue-500 text-lg">
-              $0.00
+            <p id="cart-total" className="font-bold text-blue-500 text-xl">
+              $9.95
             </p>
           </div>
         </div>

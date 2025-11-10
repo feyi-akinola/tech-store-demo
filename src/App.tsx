@@ -1,6 +1,10 @@
+// Sections imports
 import NavBar from "./sections/NavBar";
 import MainSection from "./sections/MainSection";
 import PopularCategoriesSection from "./sections/PopularCategoriesSection";
+import Footer from "./sections/Footer";
+
+// GSAP imports
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollSmoother from "gsap/ScrollSmoother";
@@ -20,12 +24,14 @@ function App() {
 
   return (
     <div id="scroll-wrapper">
-      <div id="scroll-content" className="antialiased text-black/80">
+      <div id="scroll-content" className="antialiased max-w-[2200px] mx-auto text-black/80">
         <NavBar />
 
         <MainSection />
 
         <PopularCategoriesSection />
+
+        <Footer />
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ const PopularCategoriesSection = () => {
   ];
 
   return (
-    <section className="flex flex-col p-14 max-w-[2000px] ml-auto mr-auto">
+    <section className="flex flex-col p-14 ml-auto mr-auto">
       <h2 className="text-4xl font-bold">
         Popular Categories
       </h2>

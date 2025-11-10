@@ -1,7 +1,7 @@
 
 const MainSection = () => {
   return (
-    <section className="grid grid-cols-4 gap-6 p-14 max-w-[2000px] ml-auto mr-auto">
+    <section className="grid grid-cols-4 gap-6 p-14 ml-auto mr-auto">
       <div
         className="bg-purple-400 rounded-2xl col-span-2 row-span-2
           hover:scale-102 transition-transform duration-300 cursor-pointer
