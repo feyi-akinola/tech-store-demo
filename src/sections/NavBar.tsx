@@ -3,7 +3,7 @@ import TopBanner from "../components/TopBanner.tsx";
 
 const NavBar = () => {
   return (
-    <nav className="w-full">
+    <nav className="sticky bg-white top-0 z-50 w-full">
       <TopBanner />
 
       <BottomBanner />
