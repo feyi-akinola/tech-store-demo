@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="./public/images/showcase/image.png" alt="Tech Store Demo banner" />
+  
   <h1>Tech Store Demo</h1>
   
   <p>
