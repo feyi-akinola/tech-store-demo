@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/images/showcase/image.png" alt="Tech Store Demo banner" />
+  <img src="./public/images/showcase/image-1.png" alt="Tech Store Demo banner" />
   
   <h1>Tech Store Demo</h1>
   
