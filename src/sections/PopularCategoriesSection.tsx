@@ -46,12 +46,13 @@ const PopularCategoriesSection = () => {
   ];
 
   return (
-    <section className="flex flex-col p-14 ml-auto mr-auto">
-      <h2 className="text-4xl font-bold">
+    <section className="flex flex-col p-6 md:p-14 mx-auto gap-4">
+      <h2 className="text-2xl md:text-4xl font-bold">
         Popular Categories
       </h2>
 
-      <div className="w-full flex justify-between gap-4">
+      <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
+        lg:grid-cols-5 xl:grid-cols-7">
         {
           categories.map((category, index) => (
             <PopularCategory

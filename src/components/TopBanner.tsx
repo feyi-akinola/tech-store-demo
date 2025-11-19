@@ -35,7 +35,7 @@ const TopBanner = () => {
   return (
     <div 
       id="top-banner"
-      className="flex justify-between gap-16 px-24 py-4"
+      className="flex justify-between gap-16 px-10 lg:px-24 py-4 h-20"
     >
       <SearchBar />
 

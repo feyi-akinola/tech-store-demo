@@ -8,24 +8,24 @@ const PopularCategory = ({ category }: PopularCategoryProps) => {
   const { title, image, quantity } = category;
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center gap-1
+    <div className="max-h-54 sm:max-h-68 flex flex-col flex-1 items-center justify-center gap-1
       group cursor-pointer">
       <img 
         src={(image)} 
         alt={title}
-        className="w-full h-[35%] object-contain group-hover:scale-110
+        className="w-full h-[40%] object-contain group-hover:scale-110
           transition-transform duration-300"
       />
 
       <p
-        className="mt-4 text-xl font-semibold group-hover:text-blue-500
+        className="mt-4 text-lg md:text-xl font-semibold group-hover:text-blue-500
           transition-colors duration-200"
       >
         {title}
       </p>
 
       <p
-        className="text-lg font-semibold text-black/40
+        className="text-base md:text-lg font-semibold text-black/40
           group-hover:text-blue-400 transition-colors duration-200"
       >
         {`${quantity} products`}
