@@ -1,5 +1,5 @@
 ## Try it out
-[Live Preview](https://tech-store-demo-one.vercel.app)
+[🚀 Live Preview](https://tech-store-demo-one.vercel.app)
 
 <div align="center">
   <img src="./public/images/showcase/image-1.png" alt="Tech Store Demo banner" />
@@ -74,7 +74,7 @@ npm run lint
 ├─ src/
 │  ├─ assets/            # Local images/SVGs
 │  ├─ components/        # Reusable UI components
-│  ├─ sections/          # Page sections (NavBar, Main, Footer, etc.)
+│  ├─ sections/          # Page sections (NavBar, Main, Newsletter, Footer, etc.)
 │  ├─ App.tsx            # Root app component (GSAP setup here)
 │  ├─ main.tsx           # React root entry
 │  └─ index.css          # Tailwind styles entry

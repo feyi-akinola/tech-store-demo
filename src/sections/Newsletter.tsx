@@ -2,7 +2,8 @@
 const Newsletter = () => {
   return (
     <section className="w-full my-16 px-16 py-24 border-t border-gray-300">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between ">
+      <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-12
+        lg:gap-8 text-center lg:text-left items-center justify-between">
         <div className="flex flex-col gap-8">
           <h2 className="text-5xl font-bold">
             Subscribe to our newsletter
