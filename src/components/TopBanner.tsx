@@ -5,6 +5,8 @@ import TopBannerSection from "./TopBannerSection";
 import TwentyFourIcon from "../assets/svg/24.svg?react";
 import WorldIcon from "../assets/svg/world.svg?react";
 
+// Hooks
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 interface Section {
   title: string;
@@ -28,25 +30,32 @@ const TopBanner = () => {
     },
   ];
 
+  const isLargeWidth = useMediaQuery("(max-width: 1024px)");
+
   return (
     <div 
       id="top-banner"
       className="flex justify-between gap-16 px-24 py-4"
     >
       <SearchBar />
+
+      {
+        !isLargeWidth && (
+          <div className="flex gap-10">
+            {
+              topBannerSections.map((section, index) => (
+                <TopBannerSection
+                  key={index}
+                  title={section.title}
+                  description={section.description}
+                  icon={section.icon}
+                />
+              ))
+            }
+          </div>
+        )
+      }
       
-      <div className="flex gap-10">
-        {
-          topBannerSections.map((section, index) => (
-            <TopBannerSection
-              key={index}
-              title={section.title}
-              description={section.description}
-              icon={section.icon}
-            />
-          ))
-        }
-      </div>
     </div>
   );
 };
