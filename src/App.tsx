@@ -26,7 +26,7 @@ function App() {
   return (
     <div id="scroll-wrapper">
       <NavBar />
-      <div id="scroll-content" className="antialiased max-w-[2800px] mx-auto text-black/80">
+      <div id="scroll-content" className="antialiased max-w-[2800px] mx-auto text-black/80 pb-[120px]">
         <MainSection />
 
         <PopularCategoriesSection />
