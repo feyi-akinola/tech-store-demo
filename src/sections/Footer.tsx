@@ -60,19 +60,23 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full mx-auto bg-blue-100 flex flex-col items-center justify-center gap-6 p-10">
-      <div id="footer-sections" className="w-full flex items-center justify-evenly">
+    <footer className="w-full mx-auto bg-blue-100 flex flex-col items-center
+      justify-center gap-6 p-10">
+      <div
+        id="footer-sections"
+        className="w-full grid grid-cols-2 md:grid-cols-4 mx-auto">
         {
           footerSections.map((section, index) => (
-            <div key={index} className="h-full mb-8 flex flex-col gap-4">
-              <h3 className="text-2xl font-bold">{section.title}</h3>
-              <ul className="flex flex-col gap-2">
+            <div key={index} className="h-full mb-8 flex flex-col gap-4 text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-bold">{section.title}</h3>
+              <ul className="flex flex-col gap-1 md:gap-2">
                 {
                   section.links.map((link, linkIndex) => (
                     <a
                       key={linkIndex}
                       href="#"
-                      className="text-lg hover:text-blue-500 transition-colors duration-300">
+                      className="hover:text-blue-500 transition-colors
+                        duration-300 text-base md:text-lg">
                       {link}
                     </a>
                   ))
@@ -89,7 +93,8 @@ const Footer = () => {
             <a
               key={index}
               href="#"
-              className="italic text-sm text-black/50 hover:text-blue-500 transition-colors duration-300">
+              className="italic text-sm text-black/50 hover:text-blue-500
+                transition-colors duration-300">
               {link}
             </a>
           ))
