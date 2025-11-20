@@ -64,7 +64,7 @@ const Footer = () => {
       justify-center gap-6 p-10">
       <div
         id="footer-sections"
-        className="w-full grid grid-cols-2 md:grid-cols-4 mx-auto">
+        className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
         {
           footerSections.map((section, index) => (
             <div key={index} className="h-full mb-8 flex flex-col gap-4 text-center md:text-left">
